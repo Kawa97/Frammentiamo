@@ -30,11 +30,11 @@ public class MainActivity extends AppCompatActivity implements OnHeadlineSelecte
             Bundle bundle = new Bundle();
             bundle.putInt("posizione",0);
             detailFragment.setArguments(bundle);
-            fragmentTransaction.add(R.id.contenitoreDetail,detailFragment);
+            fragmentTransaction.replace(R.id.contenitoreDetail,detailFragment);
         }
         else {
             ListFragment listFragment = new ListFragment();
-            fragmentTransaction.add(R.id.contenitoreFragment,listFragment);
+            fragmentTransaction.replace(R.id.contenitoreFragment,listFragment);
             fragmentTransaction.commit();
         }
     }
