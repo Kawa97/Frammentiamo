@@ -45,13 +45,8 @@ public class ListFragment extends Fragment {
                 String sezione[]=adapter.getValues();
                 Toast.makeText(getActivity(), sezione[position], Toast.LENGTH_SHORT).show();
                 mCallback.onArticleSelected(position);
-                aggiorna();
             }
         });
-    }
-
-    private void aggiorna() {
-        adapter.notifyDataSetChanged();
     }
 
     @Override

@@ -22,6 +22,8 @@ public class DetailFragment extends Fragment {
     OnHeadlineSelectedListener mCallback;
     static String dettaglio;
     private String text;
+    String[] DETTAGLI = new String[] { "AAAAAAAAAAAAAAAAAAA", "BBBBBBBBBBBBB", "CCCCCCCCCC"};
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
@@ -33,11 +35,7 @@ public class DetailFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
 
         TextView textView= (TextView) view.findViewById(R.id.detailView);
-        textView.setText(text);
-    }
-
-    public void setArguments(String text) {
-        this.text=text;
+        textView.setText(DETTAGLI[getArguments().getInt("posizione")]);
     }
 
 }
